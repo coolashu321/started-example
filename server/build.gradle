@@ -1,0 +1,11 @@
+
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+
+  compile project(':services')
+  compile project(':tdo')
+
+  compile 'com.taulia.starters:starter-intapi'
+  compile 'com.taulia.starters:starter-intapi-jersey'
+}

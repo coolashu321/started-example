@@ -1,0 +1,30 @@
+buildscript {
+  dependencies {
+    def startersVersion = '0.0.8'
+    classpath "com.taulia.starters:gradle-plugin:" + startersVersion
+  }
+}
+
+allprojects {
+
+  group = 'com.taulia.example'
+  version = '0.0.1'
+
+  apply plugin: 'idea'
+}
+
+subprojects {
+
+  apply plugin: 'com.taulia.starters'
+
+  dependencies {
+    compile 'org.codehaus.groovy:groovy'
+
+    testCompile 'com.taulia.starters:starter-test'
+  }
+
+}
+
+wrapper {
+  gradleVersion = '5.4.1'
+}

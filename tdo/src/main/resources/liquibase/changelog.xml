@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <preConditions onFail="WARN">
+    <dbms type="h2" />
+  </preConditions>
+
+  <changeSet id="widget" author="nico">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="widget" />
+      </not>
+    </preConditions>
+    <createTable tableName="widget">
+      <column name="id" type="varchar(32)">
+        <constraints primaryKey="true" nullable="false" />
+      </column>
+      <column name="name" type="varchar(250)">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>

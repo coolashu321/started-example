@@ -1,0 +1,9 @@
+
+dependencies {
+
+  compile project(':core-data')
+  compile 'com.taulia.starters:starter-client-feign'
+
+  testCompile project(':server')
+
+}

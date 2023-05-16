@@ -1,0 +1,11 @@
+
+dependencies {
+
+  compile project(":core-data")
+
+  compile 'com.taulia.starters:starter-jpa'
+
+  // For this example, for now use H2 for both test and production
+  compile 'com.h2database:h2'
+
+}

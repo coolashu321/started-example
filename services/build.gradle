@@ -1,0 +1,9 @@
+
+dependencies {
+
+  compile project(':tdo')
+  compile project(':core-data')
+
+  compile 'com.taulia.starters:starter-intapi'
+
+}

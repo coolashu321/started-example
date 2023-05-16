@@ -1,0 +1,8 @@
+
+include 'client'
+include 'core-data'
+include 'server'
+include 'services'
+include 'tdo'
+
+rootProject.name = 'intapi-example'
